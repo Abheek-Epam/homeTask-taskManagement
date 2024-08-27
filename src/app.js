@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var taskManager_1 = require("./taskManager");
+var manager = new taskManager_1.TaskManger();
+manager.addTask("test1");
+manager.addTask("test2");
+manager.addTask("test3");
+console.log(manager.listTask());
+var tasks = manager.listTask();
+manager.markAsCompleted(tasks[0].id);
+console.log(manager.listTask());
